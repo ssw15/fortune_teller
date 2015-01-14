@@ -7,6 +7,27 @@ Rails.application.routes.draw do
   # PART 2: VARIABLE ROUTES
   # =======================
 
+  # Routes for adding a new Zodiac (CREATE)
+  get("/zodiacs/new", { :controller => "zodiacs", :action => "new_form" })
+  get("/create_zodiac", { :controller => "zodiacs", :action => "create" })
+
+  # Routes for reading Zodiacs (READ)
+  get("/all_zodiacs", { :controller => "zodiacs", :action => "index" })
+  get("/zodiacs/:id", { :controller => "zodiacs", :action => "show" })
+
   get("/signs/:the_sign",         { :controller => "zodiacs", :action => "sign" })
   get("/creatures/:the_creature", { :controller => "zodiacs", :action => "creature" })
+
+
+
 end
+
+
+
+
+
+
+
+
+
+
