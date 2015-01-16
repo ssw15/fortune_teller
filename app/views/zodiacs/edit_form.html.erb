@@ -1,0 +1,30 @@
+<h1>Editing Zodiac</h1>
+
+<form action="http://localhost:3000/update_zodiac/<%= @zodiac.id %>">
+
+  <div>
+    <label for="sign">Sign:</label>
+    <input id="sign" type="text" name="sign" placeholder="Enter the sign" value="<%= @zodiac.sign %>">
+  </div>
+  <div>
+  <label for="creature">Creature:</label>
+    <input id="creature" type="text" name="creature" placeholder="Enter the creature" value="<%= @zodiac.creature %>">
+  </div>
+  <div>
+    <label for="fortune">Fortune:</label>
+    <input id="fortune" type="text" name="fortune" placeholder="Enter the fortune" value="<%= @zodiac.fortune %>">
+  </div>
+
+  <div>
+    <input type="submit" value="Update Zodiac">
+  </div>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,3 +1,32 @@
 <h1>All Zodiacs</h1>
 
-<%= debug(@list_of_zodiacs) %>
+<p><a href="http://localhost:3000/zodiacs/new">Add A New Zodiac</a></p>
+
+<dl>
+  <% @list_of_zodiacs.each do |zodiac| %>
+
+  <dt><%= zodiac.sign %></dt>
+  <dd>
+    (<%= zodiac.creature %>)
+    <%= zodiac.fortune %>
+
+    <p>
+    <a href="http://localhost:3000/zodiacs/<%= zodiac.id %>">Show</a>
+      <a href="http://localhost:3000/zodiacs/<%= zodiac.id %>/edit">Edit</a>
+      <a href="http://localhost:3000/delete_zodiac/<%= zodiac.id %>">Delete</a>
+    </p>
+  </dd>
+
+  <% end %>
+
+</dl>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
